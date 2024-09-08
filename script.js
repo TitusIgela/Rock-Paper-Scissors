@@ -4,38 +4,40 @@ function getRandomInt(max) {
   }
 
 
-  // create a function that will randomly return rock paper or scissors.
+  // function that will randomly return rock paper or scissors.
 
 function getComputerChoice() {
     let choice = getRandomInt(3);
     if (choice < 1) {
-        console.log("rock");
+        return "rock";
     } else if (choice < 2) {
-        console.log("paper");
+        return "paper";
     } else {
-        console.log ("scissors");
+        return "scissors";
     }
-
 }
-getComputerChoice();
+
+// console.log(getComputerChoice())
+
+// function to get player input
 
 function getHumanChoice(){
     let choice = prompt("Make your choice: rock, paper or scissors", "");
-    if (choice === "rock"){
-        console.log("rock");
-    } else if (choice === "paper"){
-        console.log("paper");
-    } else if (choice === "scissors"){
-        console.log("scissors");
+    if (choice.toLowerCase() === "rock"){
+        return "rock";
+    } else if (choice.toLocaleLowerCase() === "paper"){
+        return "paper";
+    } else if (choice.toLowerCase() === "scissors"){
+        return "scissors";
     }
-
 }
 
-getHumanChoice();
+
 
 let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
+
 
 }
