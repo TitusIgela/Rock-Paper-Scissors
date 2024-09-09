@@ -4,8 +4,6 @@ function getRandomInt(max) {
   }
 
 
-  // function that will randomly return rock paper or scissors.
-
 function getComputerChoice() {
     let choice = getRandomInt(3);
     if (choice < 1) {
@@ -16,10 +14,6 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-
-// console.log(getComputerChoice())
-
-// function to get player input
 
 function getHumanChoice(){
     let choice = prompt("Make your choice: rock, paper or scissors", "");
@@ -33,7 +27,6 @@ function getHumanChoice(){
         return "scissors";
     }
 }
-
 
 
 let humanScore = 0;
@@ -63,20 +56,41 @@ function playRound(humanChoice, computerChoice){
         computerScore++;
 
     }
-        
-        
+           
 }
 
 
-// rock beats scissors; rock > scissors
-// scissors beats paper;
-//paper beats rock
-//
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 
-console.log(humanSelection);
-console.log(computerSelection);
-playRound(humanSelection, computerSelection);
+function playGame(){
+    playRound;
+    console.log(humanSelection);
+    console.log(computerSelection);
+    console.log(`Score User ${humanScore}/ Computer ${computerScore}`);
+    playRound;
+    console.log(humanSelection);
+    console.log(computerSelection);
+    console.log(`Score User ${humanScore}/ Computer ${computerScore}`);
+    playRound;
+    console.log(humanSelection);
+    console.log(computerSelection);
+
+    console.log(`Score User ${humanScore}/ Computer ${computerScore}`);
+    playRound;
+    console.log(humanSelection);
+    console.log(computerSelection);
+
+    console.log(`Score User ${humanScore}/ Computer ${computerScore}`);
+    playRound;
+    console.log(humanSelection);
+    console.log(computerSelection);
+
+    console.log(`Score User ${humanScore}/ Computer ${computerScore}`);
+
+}
+
+
+playGame();
