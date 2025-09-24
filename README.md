@@ -13,3 +13,8 @@ Project of recreating a simple game through the console.log.
     -   Create function
     -   Assign variable
     -   Display output in the console
+
+
+## Plan /Pseudocode
+
+1. 
