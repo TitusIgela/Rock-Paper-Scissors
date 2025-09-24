@@ -19,9 +19,51 @@ Project of recreating a simple game through the console.log.
 
 1. Create function for computer choice
 getComputerChoice();
+
 computer choice random output
-output string : 'rock' 'paper' 'scissor'
+
+Create function random input 
 let random = Math.floor(Math.random() * 3) give number between 0 to 2.
+
+Three choice
+output string : 'rock' 'paper' 'scissor'
 0 = rock
 1 = paper
 2 = scissor
+
+2. Create function for player choice
+initVal
+none
+Input 
+message: question being asked of the user 
+variable: where answer from user will be stored
+output
+'rock' 'paper' 'scissor'
+type
+string
+
+3. Create variable for scores
+initVal 
+0
+Input
+winner round (int)
+output
+string or int
+name
+humanScore / computerScore
+
+4. game logic
+Create function playRound
+output
+message : win or lose
+increment score
+Input
+human choice / computer choice: to lower case
+initVal
+type
+message : string
+score : number
+
+rock vs scissor = rock win
+paper vs rock = paper win
+scissor vs paper = scissor win
