@@ -27,20 +27,47 @@ function playRound(humanChoice, computerChoice){
     if (!humanChoice){
         humanChoice = getComputerChoice();
     }
-    let human = humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+    let human = humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase()
     let computer = computerChoice.at(0).toUpperCase() + computerChoice.slice(1).toLowerCase();
-    if (human === computer){
-        console.log("It's a draw, try again!");
-    }else if (human === "Rock" && computer === "Scissor" ||
-        human === "Paper" && computer === "Rock" ||
-        human === "Scissor" && computer === "Paper"){
-            humanScore++;
-            console.log(`You win! ${human} beats ${computer}`);
-        } else { 
+    let winner = `You win! ${human} beats ${computer}`;
+    let loser = `You lose! ${computer} beats ${human}`;
+
+    // if (human === computer){
+    //     console.log("It's a draw, try again!");
+    // }else if (human === "Rock" && computer === "Scissor" ||
+    //     human === "Paper" && computer === "Rock" ||
+    //     human === "Scissor" && computer === "Paper"){
+    //         humanScore++;
+    //         console.log(winner);
+    //     } else { 
+    //         computerScore++;
+    //         console.log(loser);
+    //     }
+    switch (human){
+    case computer:
+       return console.log("It's a draw");
+        break;
+    case "Rock" && computer === "Scissor":
+        humanScore++;
+       return console.log(winner);
+        break;
+    case 'Paper' && computer === "Rock":
+        humanScore++;
+       return console.log(winner);
+
+        break;
+    case 'Scissor' && computer === "Paper":
+        humanScore++;
+       return console.log(winner);
+
+        break;
+
+        default:
             computerScore++;
-            console.log(`You lose! ${computer} beats ${human}`);
-        }
+            return console.log(loser)
+
     }
+}
  playRound(getHumanChoice(), getComputerChoice());   
 
 //     function repeat(action, time){
@@ -56,20 +83,7 @@ function playRound(humanChoice, computerChoice){
 // }
 
 // playGame();
-// switch (human){
-//     case computer:
-//        return console.log("It's a draw");
-//         break;
-//     case 'scissor' && 'paper':
-//         humanScore++;
-//        return console.log('you win');
 
-//         break;
-//     case 'paper' && 'rock':
-//         humanScore++;
-//        return console.log('you win');
-
-//         break;
 
 /*(human === "rock" && computer === "paper" ||
 human === "paper" && computer === "scissor" ||
