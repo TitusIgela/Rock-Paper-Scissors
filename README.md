@@ -54,20 +54,24 @@ humanScore / computerScore
 
 4. game logic
 
+same draw 
 Winner
 rock vs scissor = rock win
 paper vs rock = paper win
 scissor vs paper = scissor win
 else lose
-same draw 
 
 Create function playRound
 output
 message : win or lose
+with string "input"
 increment score
+
 Input
-human choice / computer choice: to lower case
+human choice / computer choice: to lower case (case-insensitive)
 initVal
+string 
+
 type
 message : string
 score : number
