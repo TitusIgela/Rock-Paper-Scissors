@@ -53,6 +53,14 @@ name
 humanScore / computerScore
 
 4. game logic
+
+Winner
+rock vs scissor = rock win
+paper vs rock = paper win
+scissor vs paper = scissor win
+else lose
+same draw 
+
 Create function playRound
 output
 message : win or lose
@@ -64,6 +72,3 @@ type
 message : string
 score : number
 
-rock vs scissor = rock win
-paper vs rock = paper win
-scissor vs paper = scissor win

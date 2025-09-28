@@ -6,9 +6,9 @@ function getRandomInt(max){
 
 function getComputerChoice(choice){
     choice = getRandomInt(3)
-    if (choice === 0) return "Rock";
-    if (choice === 1) return "Paper";
-    if (choice === 2) return "Scissor";
+    if (choice === 0) return "rock";
+    if (choice === 1) return "paper";
+    if (choice === 2) return "scissor";
 }
 
 // console.log(getComputerChoice());
@@ -19,44 +19,44 @@ function getHumanChoice(){
 
 // console.log(getHumanChoice())
 
+let humanScore = 0,
+computerScore = 0;
 
 
 function playRound(humanChoice, computerChoice){
-    let human = humanChoice.toLowerCase();
-    let computer = computerChoice.toLowerCase();
+    let human = humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+    let computer = computerChoice.at(0).toUpperCase() + computerChoice.slice(1).toLowerCase();
     if (human === computer){
         console.log("It's a draw, try again!");
-    }else if (human === "rock" && computer === "scissor" ||
-        human === "paper" && computer === "rock" ||
-        human === "scissor" && computer === "paper"){
+    }else if (human === "Rock" && computer === "Scissor" ||
+        human === "Paper" && computer === "Rock" ||
+        human === "Scissor" && computer === "Paper"){
             humanScore++;
-            console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-        } else { (human === "rock" && computer === "paper" ||
+            console.log(`You win! ${human} beats ${computer}`);
+        } else { /*(human === "rock" && computer === "paper" ||
             human === "paper" && computer === "scissor" ||
-            human === "scissor" && computer === "rock")
+            human === "scissor" && computer === "rock")*/
             computerScore++;
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+            console.log(`You lose! ${computer} beats ${human}`);
         }
     }
-    
+ playRound(getHumanChoice(), getComputerChoice());   
 
-    function repeat(action, time){
-        for (let i = 0; i <= time; i++){
-            action(i);
-        }
-    }
-    let humanScore = 0,
-    computerScore = 0;
+//     function repeat(action, time){
+//         for (let i = 0; i <= time; i++){
+//             action(i);
+//         }
+//     }
     
-    function playGame(){
-    let score = `Player ${humanScore} vs Computer ${computerScore}`
-    repeat(playRound(getHumanChoice(), getComputerChoice()), 5);
-    console.log(score)
-}
+//     function playGame(){
+//     let score = `Player ${humanScore} vs Computer ${computerScore}`
+//     repeat(playRound(getHumanChoice(), getComputerChoice()), 5);
+//     console.log(score)
+// }
 
-playGame();
-// switch (winner){
-//     case :
+// playGame();
+// switch (human){
+//     case computer:
 //        return console.log("It's a draw");
 //         break;
 //     case 'scissor' && 'paper':
