@@ -24,6 +24,9 @@ computerScore = 0;
 
 
 function playRound(humanChoice, computerChoice){
+    if (!humanChoice){
+        humanChoice = getComputerChoice();
+    }
     let human = humanChoice.at(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
     let computer = computerChoice.at(0).toUpperCase() + computerChoice.slice(1).toLowerCase();
     if (human === computer){
@@ -33,9 +36,7 @@ function playRound(humanChoice, computerChoice){
         human === "Scissor" && computer === "Paper"){
             humanScore++;
             console.log(`You win! ${human} beats ${computer}`);
-        } else { /*(human === "rock" && computer === "paper" ||
-            human === "paper" && computer === "scissor" ||
-            human === "scissor" && computer === "rock")*/
+        } else { 
             computerScore++;
             console.log(`You lose! ${computer} beats ${human}`);
         }
@@ -70,4 +71,6 @@ function playRound(humanChoice, computerChoice){
 
 //         break;
 
-// }
+/*(human === "rock" && computer === "paper" ||
+human === "paper" && computer === "scissor" ||
+human === "scissor" && computer === "rock")*/
