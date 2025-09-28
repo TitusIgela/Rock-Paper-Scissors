@@ -52,7 +52,7 @@ string or int
 name
 humanScore / computerScore
 
-4. game logic
+4. round logic
 
 same draw 
 Winner
@@ -75,4 +75,16 @@ string
 type
 message : string
 score : number
+
+5. game logic
+play 5 round / count score / declare winner
+
+create function playGame
+input
+loop 5 times playRound 
+
+output
+store score count
+update score variable
+declare winner & score
 
